@@ -160,92 +160,118 @@ footer {
 .card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    padding: 20px;
-    gap: 20px;
 }
 
 /* Estilos reviews */
-.carousel {
+.reviews h2{
+    text-align: center;
+    padding: 30px;
+}
+.slide p {
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    /* adjust the width */
-    height: 500px;
-    /* adjust the height */
+    height: 100%;
+    margin: 0 20px; /* Agregar margen izquierdo y derecho */
+  }
+  .slide p strong{
+    color: black;
+  }
+  .slide h3{
+    color: black;
+  }
+
+.slider {
+    background: rgb(228, 227, 227);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0,.125);
+    margin: auto;
     overflow: hidden;
     position: relative;
-}
-
-.slide {
-    width: 400px;
-    /* adjust the width */
-    height: 400px;
-    /* adjust the height */
-    margin: 0 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    position: absolute;
-    animation: slide 12s infinite;
-}
-
-@keyframes slide {
+    width: 960px;
+   
+    .slide-track {
+      animation: scroll 70s linear infinite;
+      display: flex;
+      width: calc(250px * 6 + 280px);
+    }
+    
+    .slide {
+        height: 230px;
+        width: 250px;
+        margin-right: 20px; /* Agregar margen derecho */
+      }
+  }
+  
+  @keyframes scroll {
     0% {
-        left: 0;
+      transform: translateX(0);
     }
-
-    20% {
-        left: 0;
-    }
-
-    25% {
-        left: -400px;
-    }
-
-    /* adjust the width */
-    45% {
-        left: -400px;
-    }
-
-    /* adjust the width */
-    50% {
-        left: -800px;
-    }
-
-    /* adjust the width */
-    70% {
-        left: -800px;
-    }
-
-    /* adjust the width */
-    75% {
-        left: -1200px;
-    }
-
-    /* adjust the width */
-    95% {
-        left: -1200px;
-    }
-
-    /* adjust the width */
     100% {
-        left: 0;
+      transform: translateX(calc(-250px * 6));
     }
-}
+  }
 
-.slide:nth-child(2) {
-    animation-delay: -4s;
-}
+  .slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.slide:nth-child(3) {
-    animation-delay: -8s;
-}
+  /* estilo de las estrellas del parrafo */
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0,.125);
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1100px;
+  }
+  
+  .slide-track {
+    display: flex;
+    width: calc(250px * 6 + 20px); /* Agregar espacio entre diapositivas */
+    animation: scroll 10s linear infinite;
+  }
+  
+  .slide {
+    height: 100px;
+    width: 250px;
+    margin-right: 20px; /* Agregar margen derecho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .review-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+  }
+  
+  .review-content p {
+    color: black;
+    margin-bottom: 10px; /* Agregar margen inferior al parráfo */
+  }
+  
+  .review-info {
+    display: flex;
+    justify-content: center; /* Alinear horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+  }
+  
+  .review-name {
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+  }
 
-
-
-
+  .review-stars {
+    color: rgb(241, 221, 33);
+  }
+  
+/* mediaqueri */
 @media (max-width:480px) {
 
     header {
